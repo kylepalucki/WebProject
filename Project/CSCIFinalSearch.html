@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<title>CSCIFinalSearch</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css">
+	<link href="CSCIFinalSearch.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js"></script>
+	<script type="text/javascript" src="CSCIFinalSearch.js"></script>
+</head>
+
+<body>
+	<div id="leftSidenav" class="sidenav sidenav-left" style="color:white; padding-left:15px; padding-top:30px">
+		<h4>Filter By:</h4>
+		<br>
+
+		<div class="master-filter">
+			<div class="custom-control custom-checkbox" style="padding-left:25px">
+		    <input type="checkbox" class="custom-control-input" id="detailsCheck" checked value="True" name="detailsFilter">
+		    <label class="custom-control-label" for="detailsCheck">Hide movies with missing details</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:25px">
+		    <input type="checkbox" class="custom-control-input" id="exclusiveCheck" checked value="True" name="exclusiveFilter">
+		    <label class="custom-control-label" for="exclusiveCheck">Make 'Genre' filter "Both/And"</label>
+			</div>
+			<br>
+		</div>
+
+		<div class="availability-filter">
+			<h5>Availability</h5>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="availabilityCheck1" value="Available" name="availability">
+		    <label class="custom-control-label" for="availabilityCheck1">Available</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="availabilityCheck2" value="Unavailable" name="availability">
+		    <label class="custom-control-label" for="availabilityCheck2">Unavailable</label>
+			</div>
+			<br>
+		</div>
+
+		<div class="rating-filter">
+			<h5>Rating</h5>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck1" value="G,TV-G" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck1">G</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck2" value="PG,TV-PG,GP" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck2">PG</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck3" value="PG-13,TV-14,M" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck3">PG-13</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck4" value="R,TV-MA" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck4">R</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck5" value="NC-17,X" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck5">NC-17</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="ratingCheck6" value="Approved,Unrated,Not Rated" name="ratings">
+		    <label class="custom-control-label" for="ratingCheck6">Other</label>
+			</div>
+			<br>
+		</div>
+
+		<div class="genre-filter">
+			<h5>Genre</h5>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck1" value="Action" name="genres">
+		    <label class="custom-control-label" for="genreCheck1">Action</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck2" value="Adventure" name="genres">
+		    <label class="custom-control-label" for="genreCheck2">Adventure</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck3" value="Animation" name="genres">
+		    <label class="custom-control-label" for="genreCheck3">Animation</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+				<input type="checkbox" class="custom-control-input" id="genreCheck4" value="Biography" name="genres">
+				<label class="custom-control-label" for="genreCheck4">Biography</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+				<input type="checkbox" class="custom-control-input" id="genreCheck5" value="Comedy" name="genres">
+				<label class="custom-control-label" for="genreCheck5">Comedy</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck6" value="Crime" name="genres">
+		    <label class="custom-control-label" for="genreCheck6">Crime</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck7" value="Documentary" name="genres">
+		    <label class="custom-control-label" for="genreCheck7">Documentary</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck8" value="Drama" name="genres">
+		    <label class="custom-control-label" for="genreCheck8">Drama</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck9" value="Fantasy" name="genres">
+		    <label class="custom-control-label" for="genreCheck9">Fantasy</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck10" value="Family" name="genres">
+		    <label class="custom-control-label" for="genreCheck10">Family</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+				<input type="checkbox" class="custom-control-input" id="genreCheck11" value="History" name="genres">
+				<label class="custom-control-label" for="genreCheck11">History</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck12" value="Horror" name="genres">
+		    <label class="custom-control-label" for="genreCheck12">Horror</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck13" value="Music" name="genres">
+		    <label class="custom-control-label" for="genreCheck13">Musical/Music</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck14" value="Mystery" name="genres">
+		    <label class="custom-control-label" for="genreCheck14">Mystery</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck15" value="Romance" name="genres">
+		    <label class="custom-control-label" for="genreCheck15">Romance</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck16" value="Sci-fi" name="genres">
+		    <label class="custom-control-label" for="genreCheck16">Sci-Fi</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck17" value="Sport" name="genres">
+		    <label class="custom-control-label" for="genreCheck17">Sport</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck18" value="Thriller" name="genres">
+		    <label class="custom-control-label" for="genreCheck18">Thriller</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck19" value="War" name="genres">
+		    <label class="custom-control-label" for="genreCheck19">War</label>
+			</div>
+			<div class="custom-control custom-checkbox" style="padding-left:50px">
+		    <input type="checkbox" class="custom-control-input" id="genreCheck20" value="Western" name="genres">
+		    <label class="custom-control-label" for="genreCheck20">Western</label>
+			</div>
+			<br>
+		</div>
+
+		<div class="duration-filter">
+			<h5>Duration (min)</h5>
+			<b>&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;</b><input id="duration-slider" type="text" class="span2" data-slider-min="7" data-slider-max="600" data-slider-step="1" data-slider-value="[7,600]" style = "width:130px"/><b>&nbsp;&nbsp;&nbsp;600</b>
+			<br><br>
+		</div>
+
+		<div class="price-filter">
+			<h5>Price ($)</h5>
+			<b>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;</b><input id="price-slider" type="text" class="span2" data-slider-min="1" data-slider-max="30" data-slider-step="1" data-slider-value="[1,30]" style = "width:130px"/><b>&nbsp;&nbsp;&nbsp;30</b>
+			<br><br>
+		</div>
+
+		<div class="year-filter">
+			<h5>Year</h5>
+			<b>&nbsp;1916&nbsp;&nbsp;&nbsp;</b><input id="year-slider" type="text" class="span2" data-slider-min="1916" data-slider-max="2016" data-slider-step="1" data-slider-value="[1916,2016]" style = "width:107px"/><b>&nbsp;&nbsp;2016</b>
+			<br><br>
+		</div>
+
+		<div class="critical-filter">
+			<h5>Critical Rating</h5>
+			<b>&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;</b><input id="critical-slider" type="text" class="span2" data-slider-min="1" data-slider-max="10" data-slider-step=".2" data-slider-value="[1,10]" style = "width:130px"/><b>&nbsp;&nbsp;&nbsp;10</b>
+			<br><br>
+		</div>
+	</div>
+
+	<div id="rightSidenav" class="sidenav sidenav-right">
+		<a href="#top">Return to Top</a>
+	</div>
+
+	<div class="main">
+
+		<a id="top"></a>
+
+		<div class="container">
+
+			<img src="#" class="logo" alt="filler logo">
+			<a href="#" class="header-btn"><i class="fa fa-user-o" style="font-size:24px, margin-left:8px"></i> Account</a>
+			<a href="#" class="header-btn"><i class="fa fa-cart-plus" style="font-size:24px, margin-left: 4px"></i></a>
+
+			<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+
+			<form id="searchForm">
+				<input type="text" placeholder="Search.." name="search">
+				<button type="button" id="search" onclick="searchForMovies()" class="search-btn"><i class="fa fa-search" style="font-size: 24px"></i></button>
+			</form>
+
+		</div>
+
+		<br>
+
+		<div>
+			<p id="numResults"></p>
+		</div>
+
+		<br>
+		<br>
+
+		<div id="resultTemplate" class="container">
+			<div class="row main-row">
+				<div class="col-sm-3">
+					<img src="poster.png" style="width:60%" alt="Movie Poster">
+				</div>
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-8">
+							<h2 class="title"></h2>
+						</div>
+						<div class="col-sm-4 left-box">
+							<a class="in-stock">In-Stock</a>
+							<a class="left-box" href="#"><i class="fa fa-paper-plane"></i> Buy Now</a>
+						</div>
+					</div>
+					<div class="row sub-row">
+						<h4 class="info"></h4>
+						<div class="rating">
+							<span id="star 1" class="fa fa-star checked"></span>
+							<span id="star 2" class="fa fa-star checked"></span>
+							<span id="star 3" class="fa fa-star checked"></span>
+							<span id="star 4" class="fa fa-star"></span>
+							<span id="star 5" class="fa fa-star"></span>
+							<span id="star 6" class="fa fa-star"></span>
+							<span id="star 7" class="fa fa-star"></span>
+							<span id="star 8" class="fa fa-star"></span>
+							<span id="star 9" class="fa fa-star"></span>
+							<span id="star 10" class="fa fa-star"></span>
+						</div>
+					</div>
+					<p class="resultIndex"></p>
+				</div>
+			</div>
+			<br>
+		</div>
+
+		<div class="searchResults">
+		</div>
+	</div>
+
+</body>
+</html>
