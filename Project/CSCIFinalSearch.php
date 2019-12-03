@@ -28,7 +28,7 @@
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $db = "movie_rental";
+  $db = "csci330";
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $db);
@@ -39,7 +39,7 @@
   }
 
   // Create query
-  $query = "SELECT * FROM movie_metadata WHERE Movie_Title LIKE '%".$searchTerm."%'";
+  $query = "SELECT * FROM movie_rental WHERE Movie_Title LIKE '%".$searchTerm."%'";
 
   // Append filters to query
   $query = filterAvailability($query, $availability);

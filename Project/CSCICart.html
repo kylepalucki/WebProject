@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<title>My Cart</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css">
+	<link href="CSCICart.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js"></script>
+	<script type="text/javascript" src="CSCICart.js"></script>
+</head>
+
+<body>
+	<div id="leftSidenav" class="sidenav sidenav-left" style="color:white; padding-left:15px; padding-top:30px">
+
+	</div>
+
+	<div id="rightSidenav" class="sidenav sidenav-right">
+
+	</div>
+
+	<div class="main">
+		<a id="top"></a>
+		<br>
+		<div>
+			<p id="numResults"></p>
+		</div>
+		<div class="container">
+			<a class="header-btn" href="CSCIFinal.html">Home</a>
+			<a href="#" class="header-btn"><i class="fa fa-user-o" style="font-size:24px, margin-left:8px"></i> Account</a>
+			<a class="header-btn" onclick="">Checkout</a>
+			<a class="header-btn">Empty Cart</a>
+			<br>
+			<br>
+		</div>
+		<br>
+		<br>
+		<div id="resultTemplate" class="container">
+			<div class="row main-row">
+				<div class="col-sm-3">
+					<img src="poster.png" style="width:60%" alt="Movie Poster">
+				</div>
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-8">
+							<h2 class="title"></h2>
+						</div>
+						<div class="col-sm-4 left-box">
+							<a class="in-stock">In-Stock</a>
+						</div>
+					</div>
+					<div class="row sub-row">
+						<h4 class="info"></h4>
+						<div class="rating">
+							<span id="star 1" class="fa fa-star checked"></span>
+							<span id="star 2" class="fa fa-star checked"></span>
+							<span id="star 3" class="fa fa-star checked"></span>
+							<span id="star 4" class="fa fa-star"></span>
+							<span id="star 5" class="fa fa-star"></span>
+							<span id="star 6" class="fa fa-star"></span>
+							<span id="star 7" class="fa fa-star"></span>
+							<span id="star 8" class="fa fa-star"></span>
+							<span id="star 9" class="fa fa-star"></span>
+							<span id="star 10" class="fa fa-star"></span>
+						</div>
+					</div>
+					<p class="resultIndex"></p>
+				</div>
+			</div>
+			<br>
+		</div>
+
+		<div class="searchResults">
+		</div>
+	</div>
+
+</body>
+</html>

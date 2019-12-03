@@ -15,6 +15,7 @@
 </head>
 
 <body>
+	<script type="text/javascript" src="CSCIFinalSearch.js"></script>
 	<div id="leftSidenav" class="sidenav sidenav-left" style="color:white; padding-left:15px; padding-top:30px">
 		<h4>Filter By:</h4>
 		<br>
@@ -195,7 +196,7 @@
 
 			<img src="#" class="logo" alt="filler logo">
 			<a href="#" class="header-btn"><i class="fa fa-user-o" style="font-size:24px, margin-left:8px"></i> Account</a>
-			<a href="#" class="header-btn"><i class="fa fa-cart-plus" style="font-size:24px, margin-left: 4px"></i></a>
+			<a href="CSCICart.html" class="header-btn"><i class="fa fa-cart-plus" style="font-size:24px, margin-left: 4px"></i></a>
 
 			<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
 
@@ -215,7 +216,7 @@
 		<br>
 		<br>
 
-		<div id="resultTemplate" class="container">
+		<div id="resultTemplate" class="container" onclick="addcart(this.id)">
 			<div class="row main-row">
 				<div class="col-sm-3">
 					<img src="poster.png" style="width:60%" alt="Movie Poster">
@@ -227,7 +228,7 @@
 						</div>
 						<div class="col-sm-4 left-box">
 							<a class="in-stock">In-Stock</a>
-							<a class="left-box" href="#"><i class="fa fa-paper-plane"></i> Buy Now</a>
+							<button type="button" id="cart" class="header-btn left-box" onclick="addcart()" name="addToCart">Add To Cart</Button>
 						</div>
 					</div>
 					<div class="row sub-row">

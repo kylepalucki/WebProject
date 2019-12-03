@@ -10,8 +10,7 @@
 </head>
 
 <body>
-<div id="body">
-	<div class="container">
+	<div class="container-fluid fixed-top">
 		<img src="#" class="logo" alt="filler logo">
 		
   	<!--	<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
@@ -22,57 +21,62 @@
 		
 		<a href ="CSCIFinalSearch.html" button type ="submit" class="header-btn"><i class="fa fa-search" style="font-size: 24px"></i></a>
 		<a href="#" class="header-btn"><i class="fa fa-address-book-o" style="font-size:24px, margin-left:8px"></i>Account</a>
-		<a href="#" class="header-btn"><i class="fa fa-cart-plus" style="font-size:24px, margin-left: 4px"></i></a>
+		<a href="CSCICart.html" class="header-btn"><i class="fa fa-cart-plus" style="font-size:24px, margin-left: 4px"></i></a>
 	</div>	
 	
-	<div class="container movie-details"> </div>
-		<div class="row">
-			<div class="col-md-6 left-box">
-				<h1>The Lion King</h1>
-				<p>Cast: </p>
-					 <div class="casting">
-						<img src="Donald Glover.jpg" title="Donald Glover" alt="Donald Glover">
-						<img src="Beyonce.jpg" title="ASAS">
-						<img src="image" title="ASAS">
-						<img src="image" title="ASAS">
-					</div>
+<div class="offset-xl-0 col-xl-12 col-xl-11 offset-xl-0" id="body">
+	
+	
+	<div class="container movie-details mw-100 mh-100">
+
+		<div class="row" style="padding-top: 60px">
+			<div class="col-md-6 left-box offset-lg-0 col-lg-8 col-lg-7 offset-l-1 col-xl-5">
+				<h6 style="color:rgba(158,152,152,1.00); font-size:30px">FEATURED MOVIE</h6>
+				<h1 style="font-size: 80px">The Lion King</h1>
 				
-				<p style="color:#717070">Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny on the plains of Africa. </p>
+				
+				<p style="color:#a4a1a1; font-size: 20px">Simba idolizes his father, King Mufasa, and takes to heart his own royal destiny on the plains of Africa. </p>
 				<a href="" class="info">2019</a>
 				<a href class="info">1:58 minutes</a>
 				<a href="" class="genre">Family Friendly</a>
 				<br>
-				<a href="#"><i class="fa fa-paper-plane" style="font-size:18px, background"></i>Rent Now</a>
-				<a href="#" class="download-btn"><i class="fa fa-area-chart" style="font-size:18px"></i>Inventory</a>
+				<a href="#"><i class="fa fa-paper-plane" style="font-size:20px, background"></i>Rent Now</a>
+				<a href="#" class="download-btn"><i class="fa fa-area-chart" style="font-size:20px"></i>Inventory</a>
 			</div>
 			
-		<div class="column6 text-center">
-			<img src="LionKingTest.jpg" class="movie-img right box" alt="LionKing">
+		<div class="column-md-6 text-center offset-lg-0 col-lg-8 col-xl-6 offset-xl-0">
+			<img src="lionheroimage.jpg" alt="LionKing" class="movie-img right box rounded">
 		</div>
 	</div>
-	
+	</div>
 
 	
-	<div class="container series">
-		<h3>New Releases</h3>
+	<div class="container-fluid series">
+		
+		<div class="Special Titles">
+		<h3> New on <b style="background:linear-gradient(to right, #bf0648, #fa0a5f); -webkit-background-clip:text; -webkit-text-fill-color: transparent">BeeStreams</b></h3>
+		</div>
 		<div class="row">
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-6">
 						<button class="expand">
-						<img src="MoviePlaceholder.jpg">
-						</button>
+						<img src="placeholder3.jpg"> </button>
 							<div class="movie-info">
-								<h3>Movie Name</h3>
 								<p>Movie Info</p>
+								<a href="#"><i class="fa fa-paper-plane" style="font-size:18px, background"></i>Rent Now</a>
+								
 							</div>
 					</div>
 					
 					<div class="col-6">
-						<button class="expand">
 						<img src="MoviePlaceholder.jpg">
-						</button>
+						<p class="MovieName">Joker</p>
+						<div class="overlay"></div>
+						<div class="button"><a href="#"><i class="fa fa-paper-plane" style="font-size:18px, background"></i>Buy Now</a></div>
+						
 					</div>
+					<h3 style="padding-left: 30px"><small>Joker</small></h3>
 				</div>
 			</div>
 	
@@ -83,9 +87,10 @@
 						<img src="MoviePlaceholder.jpg">
 						</button>
 							<div class="movie-info">
-							<h3>Movie Name</h3>
+							
 							<p>Movie Info</p>
 							</div>
+						<h3 style="padding-left: 30px"><small>Joker</small></h3>
 					</div>
 					
 					<div class="col-6">
@@ -117,13 +122,15 @@
 			</div>
 		</div>
 		
-		<h3>Popular Movies</h3>
+		<div class="Special Titles">
+		<h3> Best of <b style="background:linear-gradient(to right, #30CFD0 0%, #fa0a5f); -webkit-background-clip:text; -webkit-text-fill-color: transparent">Christmas Movies</b></h3>
+		</div>
 		<div class="row">
 		<div class="col-md-4">
 			<div class="row">
 			<div class="col-6">
 				<button class="expand">
-				<img src="MoviePlaceholder.jpg">
+				<img src=>
 				</button>
 				<div class="movie-info">
 					<h3></h3>
@@ -134,6 +141,7 @@
 				<button class="expand">
 				<img src="MoviePlaceholder.jpg">
 				</button>
+					<h3 style="padding-left: 30px"><small>Joker</small></h3>
 			</div>
 				
 				
@@ -152,6 +160,7 @@
 					<h3></h3>
 					<p></p>
 				</div>
+				<h3 style="padding-left: 30px"><small>Joker</small></h3>
 				</div>
 				<div class="col-6">
 				<button class="expand">
@@ -197,6 +206,9 @@
 	</div>
 	
 	<script>
+		$(window).scroll(function(){
+	$("fixed-top").toggleClass('scrolled', $(this).scrollTop() > 100);
+});
 var coll = document.getElementsByClassName("expand");
 var i;
 

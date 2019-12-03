@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 body{
-	background-image: linear-gradient(rgba(25,0,0,10), rgba(0,0,0,10));
+	background-image: linear-gradient(rgba(0,0,0,100), rgba(0,0,0,100));
+	
 }
 
 logo{
@@ -9,43 +10,82 @@ logo{
 	margin-top:18px;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.col-6:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.MovieName {
+  position: absolute;
+  width: 500px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.col-6:hover .MovieName {
+  font-weight: 300;
+}
+
+.button {
+  position: absolute;
+  width: 500px;
+  left:20px;
+  top: 250px;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.col-6:hover .button {
+  opacity: 1;
+}
+
+.fixed-top-default{
+  transition:500ms ease;
+  background:rgba(250,92,95,1.00);
+}
+
+.fixed-top-default.scrolled{
+  background:#000;
+}
+
 header{
 	height: 10%;
 }
 
-.sidenav {
-  height: 80%;
-  width: 160px;
-  position: fixed;
-  top: -50px;
-  z-index: 1;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
+.movie-details{
+	/*height: 900px;show with and without height style(s)*/
+	background-image: url("LK Background.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: left;
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.main {
-  margin-left: 160px !important; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.background-image{
+	filter: blur(1px);
 }
 
 .header-btn{
@@ -128,7 +168,7 @@ h3{
 }
 
 .expand{
-	background-color:black;
+	  background-color:black;
   color: white;
   cursor: pointer;
   padding: 18px;

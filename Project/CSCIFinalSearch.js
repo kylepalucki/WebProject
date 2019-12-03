@@ -11,8 +11,19 @@ $(document).ready(function(){
       $(this).blur();
     }
   });
-
+	//addMovie();
 });
+
+function addcart(id){
+	let title = searchResults[id].Movie_Title;
+	addMovie(title);
+	alert("added to cart");
+}
+
+function addMovie(title){
+	$.post("CartAdd.php", {title: title}, function(data){
+	});
+}
 
 function searchForMovies(){
   var search = $('input[name="search"]').val();
@@ -59,6 +70,7 @@ function searchForMovies(){
 
   $("#search").blur();
 }
+
 
 function displayResults(results){
   let index = 0;
