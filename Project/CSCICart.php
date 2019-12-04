@@ -1,9 +1,4 @@
 <?php
-	// Grab values from server
-
-
-	//$s_cart_movies = array("Goodfellas", "Braveheart", "Das Boot", "U2 3D", "Toy Story 3", "Scarface");
-
 
 	// Connect to database
 	$servername = "localhost";
@@ -19,6 +14,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	
+	//select everything in the cart so that in can be displayed on CSCICart.html
 	$query = "SELECT * FROM cart";
 	$result = mysqli_query($conn, $query);
 	$info = mysqli_fetch_all($result, MYSQLI_ASSOC);

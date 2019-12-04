@@ -1,6 +1,4 @@
 <?php
-// Grab values from server
-
 // Connect to database
 $servername = "localhost";
 $username = "root";
@@ -14,8 +12,8 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
+//all this script does is delete all rows from cart table
 $delete = "DELETE FROM cart;";
-echo $delete;
 if ($conn->query($delete) === true) {
 	echo "Cart Entries Deleted";
 } else {

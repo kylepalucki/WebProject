@@ -6,25 +6,25 @@ var length = 0;
 function reqListener () {
       console.log(this.responseText);
     }
-    var oReq = new XMLHttpRequest();
+    var oReq = new XMLHttpRequest(); //http request object to web server
     oReq.onload = function() {
 		data = this.responseText;
 		var results = JSON.parse(data);
 		length = results.length;
-		displayResults(results);
+		displayResults(results); //display cart to html page
 		$("#numResults").html("Your Cart: " + length);
     };
-    oReq.open("get", "CSCICart.php", true);
+    oReq.open("get", "CSCICart.php", true); //get request to php script, script returns everything in cart.
     oReq.send();
 	
 function emptyCart() {
-	$.post("CartEmpty.php", function(data){
+	$.post("CartEmpty.php", function(data){ //post request to php script
 	});
-	window.location.reload(false); 
+	window.location.reload(false); //reload to update page after post method
 }
 
 function checkout() {
-	$.post("CartCheckout.php", function(data){
+	$.post("CartCheckout.php", function(data){ 
 	});
 	window.location.reload(false);
 }

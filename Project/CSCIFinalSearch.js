@@ -14,15 +14,15 @@ $(document).ready(function(){
 	//addMovie();
 });
 
-function addcart(id){
+function addcart(id){ //gets ID for movie from html and grabs Movie_Title element
 	let title = searchResults[id].Movie_Title;
-	addMovie(title);
+	addMovie(title);//calls addMovie()
 	window.location.reload(false); 
 }
 
 function addMovie(title){
 	$.post("CartAdd.php", {title: title}, function(data){
-	});
+	}); //post method to CartAdd.php, sends movie title to php script
 }
 
 function searchForMovies(){
