@@ -17,7 +17,7 @@ $(document).ready(function(){
 function addcart(id){
 	let title = searchResults[id].Movie_Title;
 	addMovie(title);
-	alert("added to cart");
+	window.location.reload(false); 
 }
 
 function addMovie(title){

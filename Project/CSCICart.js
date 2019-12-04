@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 });
 
 var data;
@@ -17,6 +16,19 @@ function reqListener () {
     };
     oReq.open("get", "CSCICart.php", true);
     oReq.send();
+	
+function emptyCart() {
+	$.post("CartEmpty.php", function(data){
+	});
+	window.location.reload(false); 
+}
+
+function checkout() {
+	$.post("CartCheckout.php", function(data){
+	});
+	window.location.reload(false);
+}
+	
 
 function displayResults(results){
   for (var i=0; i<length; i++) {

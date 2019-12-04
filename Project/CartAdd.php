@@ -16,7 +16,6 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$title = $_POST['title'];
-	echo $title.'<br>';
 	$query = "SELECT * FROM movie_rental WHERE Movie_Title='".$title."';";
 	$result = mysqli_query($conn, $query);
 	$info = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -24,9 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$countquery = "SELECT COUNT(*) FROM cart";
 	$countresult = mysqli_query($conn, $countquery);
 	$nums = mysqli_fetch_all($countresult, MYSQLI_ASSOC);
-	print_r($nums);
 	$count = $nums[0]['COUNT(*)']+1;
-	echo $count;
 	
 	$movie_title = "'".$info[0]['Movie_Title']."'";
 	$genres = "'".$info[0]['Genres']."'";
@@ -41,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$numorders = $info[0]['NumOrders'];
 	
 	$add = "INSERT INTO cart VALUES(".$count.",".$movie_title.",".$genres.",".$content_rating.",".$duration.",".$year.",".$director.",".$imdb.",".$rating.",".$price.",".$stock.",".$numorders.");";
-	echo $add;
 	
 	if ($conn->query($add) === true) {
 		echo 'added to cart';
